@@ -1,0 +1,84 @@
+$browser-default-font-size: 10px !default;
+
+@function pxTorem($px) {
+  //$px为需要转换的字号
+  @return $px / $browser-default-font-size * 1rem;
+}
+
+:host {
+  display: block;
+}
+
+.nav {
+  padding-left: 0px;
+  margin-top: 0px;
+  height: pxTorem(50px);
+  line-height: pxTorem(50px);
+}
+
+.tab-heading {
+  border-bottom: pxTorem(1px) solid #f8f8f8;
+}
+
+.tab-heading {
+  padding: pxTorem(0px) pxTorem(10px);
+  font-size: pxTorem(14px);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #fdfdfd;
+}
+
+.tab-heading .nav-pills {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.tab-heading .nav-pills>li {
+  float: none;
+  display: inline-block;
+}
+
+.tab-heading .nav-pills>li>a {
+  border-radius: pxTorem(0px);
+}
+
+.tab-heading li a {
+  min-width: pxTorem(80px);
+  text-align: center;
+  padding: pxTorem(10px) pxTorem(15px);
+  color:#9e9e9e;
+  cursor: pointer;
+}
+
+.tab-heading li.active a {
+  border-bottom: solid pxTorem(2px)#26C6DC;
+}
+
+.tab-heading li.active a,
+.tab-heading li.active a:focus,
+.tab-heading li.active a:hover {
+  background: 0 0;
+  color: #26C6DC;
+}
+
+.tab-heading li a:focus,
+.tab-heading li a:hover {
+  background: 0 0;
+  border-bottom: solid pxTorem(2px)#26C6DC;
+}
+
+// .tab-content>.tab {
+//   display: none;
+//   animation-name: fadeInRight;
+//   -webkit-animation-name: fadeInRight;
+//   animation-duration: 1s;
+//   -webkit-animation-duration: 1s;
+//   animation-fill-mode: both;
+//   -webkit-animation-fill-mode: both;
+// }
+
+.tab-content>.active {
+  display: block;
+}
